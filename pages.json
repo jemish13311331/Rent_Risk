@@ -1,16 +1,22 @@
 {
-	"pages": [
-  {
-    "path": "pages/intro/intro",
-    "style": {
-      "navigationBarTitleText": "Welcome"
+  "pages": [
+    {
+      "path": "pages/intro/intro",
+      "style": {
+        "navigationBarTitleText": "Welcome"
+      }
+    },
+    {
+      "path": "pages/signinup/signinup",
+      "style": {
+        "navigationBarTitleText": "Login/SignUp"
+      }
+    },
+    {
+      "path": "pages/mainPage/mainPage",
+      "style": {
+        "navigationBarTitleText": "Home"
+      }
     }
-  },
-  {
-    "path": "pages/signinup/signinup",
-    "style": {
-      "navigationBarTitleText": "Login/SignUp"
-    }
-  }
-]
+  ]
 }
