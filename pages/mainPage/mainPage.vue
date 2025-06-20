@@ -80,34 +80,63 @@
           </view>
           <view class="trend-row">
             <view class="trend-card green">
-              <text class="trend-title">Pokemon</text>
-              <text class="trend-percent">33.79%</text>
-              <img class="trend-img" src="/static/icons/green-trend.png" />
-            </view>
+                <view class="trend-title-row">
+                  <text class="trend-title">Pokemon</text>
+                  <view class="trend-metrics">
+                    <text class="trend-percent">33.79%</text>
+                    <img class="trend-img" src="/static/icons/green-trend.png" />
+                  </view>
+                </view>
+              </view>
+			  
             <view class="trend-card red">
-              <text class="trend-title">Basketball</text>
-              <text class="trend-percent">5.79%</text>
-              <img class="trend-img" src="/static/icons/red-trend.png" />
-            </view>
+				<view class="trend-title-row">
+				  <text class="trend-title">Basketball</text>
+				  <view class="trend-metrics">
+				    <text class="trend-percent">5.79%</text>
+				    <img class="trend-img" src="/static/icons/red-trend.png" />
+				  </view>
+				</view>
+			</view>
+			
             <view class="trend-card green">
-              <text class="trend-title">Pokemon</text>
-              <text class="trend-percent">33.79%</text>
-              <img class="trend-img" src="/static/icons/green-trend.png" />
-            </view>
+                <view class="trend-title-row">
+                  <text class="trend-title">Pokemon</text>
+                  <view class="trend-metrics">
+                    <text class="trend-percent">33.79%</text>
+                    <img class="trend-img" src="/static/icons/green-trend.png" />
+                  </view>
+                </view>
+              </view>
+			  
             <view class="trend-card red">
-              <text class="trend-title">Basketball</text>
-              <text class="trend-percent">5.79%</text>
-              <img class="trend-img" src="/static/icons/red-trend.png" />
+            	<view class="trend-title-row">
+            	  <text class="trend-title">Basketball</text>
+            	  <view class="trend-metrics">
+            	    <text class="trend-percent">5.79%</text>
+            	    <img class="trend-img" src="/static/icons/red-trend.png" />
+            	  </view>
+            	</view>
             </view>
+			
             <view class="trend-card green">
-              <text class="trend-title">Pokemon</text>
-              <text class="trend-percent">33.79%</text>
-              <img class="trend-img" src="/static/icons/green-trend.png" />
-            </view>
+                <view class="trend-title-row">
+                  <text class="trend-title">Pokemon</text>
+                  <view class="trend-metrics">
+                    <text class="trend-percent">33.79%</text>
+                    <img class="trend-img" src="/static/icons/green-trend.png" />
+                  </view>
+                </view>
+              </view>
+			  
             <view class="trend-card red">
-              <text class="trend-title">Basketball</text>
-              <text class="trend-percent">5.79%</text>
-              <img class="trend-img" src="/static/icons/red-trend.png" />
+            	<view class="trend-title-row">
+            	  <text class="trend-title">Basketball</text>
+            	  <view class="trend-metrics">
+            	    <text class="trend-percent">5.79%</text>
+            	    <img class="trend-img" src="/static/icons/red-trend.png" />
+            	  </view>
+            	</view>
             </view>
           </view>
         </view>
@@ -185,67 +214,80 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #1a0033;
+  background: radial-gradient(
+    circle at center,
+    #3a0066 0%,     
+    #1f003d 40%,    
+    #1a0033 70%,    
+    #0f0020 100%    
+  );
 }
+
+
+
+
 
 /* Fixed Top Header */
 .search-header {
   position: fixed;
-  margin: 50rpx 20rpx 0 0;
-  width: 90%;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #1a0033;
   z-index: 20;
-  padding: 30rpx;
+  padding: 40rpx 30rpx 20rpx;
   color: white;
 }
 
 .search-header .title {
-  font-size: 48rpx;
+  font-size: 42rpx;
+  font-weight: 600;
   margin-bottom: 20rpx;
 }
 
 .search-bar {
+  border-radius: 40rpx;
+  padding: 20rpx 24rpx;
+  background: #2a0044;
   display: flex;
   align-items: center;
-  background: #2a0044;
-  border-radius: 20rpx;
-  padding: 10rpx 20rpx;
+  height: auto;
   margin-bottom: 20rpx;
-  height: 52px;
-  margin-top: 20rpx;
+}
+
+.input {
+  flex: 1;
+  font-size: 30rpx;
+  color: white;
+  background: transparent;
+  border: none;
+  padding-left: 16rpx;
 }
 
 .icon {
   margin-right: 10rpx;
 }
 
-.input {
-  flex: 1;
-  color: white;
-  background: transparent;
-  border: none;
-}
-
 .filters {
   display: flex;
   gap: 20rpx;
-  margin-bottom: 10rpx;
-  color: white;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .filter {
-  padding: 10rpx 20rpx;
+  padding: 14rpx 30rpx;
+  border-radius: 999rpx;
   border: 2rpx solid #8a4dff;
-  border-radius: 30rpx;
-  font-size: 19px;
-  height: 25px;
-  line-height: 25px;
+  font-size: 26rpx;
+  color: #fff;
+  white-space: nowrap;
 }
 
 /* Scrollable Area */
 .scroll-area {
-  margin-top: 280rpx; /* space for fixed header */
-  margin-bottom: 160rpx; /* space for fixed footer */
+  margin-top: 300rpx; /* header space */
+  margin-bottom: 160rpx; /* footer space */
   flex: 1;
   overflow-y: scroll;
 }
@@ -266,6 +308,9 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
 
 .section-title {
   font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
 }
 
 /* Cards */
@@ -279,36 +324,46 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
 .card-list {
   display: flex;
   flex-direction: row;
-  gap: 15%;
+  gap: 40rpx;
   padding: 10rpx 0;
 }
 
 .card {
-  flex-shrink: 0;
-  width: 240rpx;
   position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  height: 260px;
+  border-radius: 80rpx; /* ⬅️ Make this bigger */
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin-right: 30rpx;
 }
 
 .card-image {
-  width: 170px;
-  height: 216px;
-  border-radius: 20rpx;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  border-radius: 80rpx; /* ⬅️ Match the parent */
 }
 
+/* Overlay text with gradient background */
 .card-text {
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.3);
-  padding: 6rpx 12rpx;
-  border-radius: 12rpx;
-  font-size: 26rpx;
-  color: #fff;
-  white-space: nowrap;
+  bottom: 0;
+  width: 100%;
+  padding: 20rpx 0;
   text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 75%);
+  z-index: 2;
+  backdrop-filter: blur(1.5px);
 }
+
+
+
 
 /* Trends */
 .trend-row {
@@ -320,13 +375,44 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
 }
 
 .trend-card {
-  flex: 0 0 auto;
-  width: 260rpx;
-  padding: 20rpx;
-  border-radius: 20rpx;
-  background: #2a0044;
+  flex-shrink: 0;
+  width: 240rpx;
+  padding: 24rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.06); /* translucent */
+  backdrop-filter: blur(12px); /* frosted glass effect */
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+
+.trend-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.trend-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.trend-percent {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: inherit;
+  padding-right: 5px;
+}
+
+
 
 .green {
   color: #00ff7f;
@@ -346,11 +432,15 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
 .hot-card {
   display: flex;
   align-items: center;
-  background: #2a0044;
-  border-radius: 20rpx;
-  padding: 20rpx;
-  margin-top: 20rpx;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 32rpx;
+  padding: 24rpx 28rpx;
+  margin-top: 24rpx;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
+
 
 .hot-card-img {
   width: 100rpx;
@@ -361,8 +451,20 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
 
 .hot-card-info {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hot-card-name {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.hot-card-price {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -371,21 +473,22 @@ import Footer from "@/components/Footer.vue"; // adjust path as needed
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100rpx;
   background: #2a0044;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 10;
-  padding-bottom: 60rpx;
+  padding: 20rpx 0 40rpx;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .icons {
   height: 16px;
   width: 16px;
 }
+
 .dollar-icon {
   height: 16px;
   width: 16px;
