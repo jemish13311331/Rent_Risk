@@ -17,6 +17,12 @@
       "style": {
         "navigationBarTitleText": "Home"
       }
+    },
+    {
+      "path": "pages/signup/signup",
+      "style": {
+        "navigationBarTitleText": "SignUp"
+      }
     }
   ]
 }
