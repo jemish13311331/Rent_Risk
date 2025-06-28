@@ -1,22 +1,32 @@
 <template>
   <view class="bottom-nav">
-    <view class="nav-icon"
+    <view class="nav-icon" @click="goNext('mainPage/mainPage')"
       ><img class="footer-icons" src="/static/icons/home-icon.png"
     /></view>
     <view class="nav-icon"
       ><img class="footer-icons" src="/static/icons/hammer-icon.png"
     /></view>
-    <view class="nav-center"
+    <view class="nav-center" @click="goNext('scan/scan')"
       ><img class="footer-icons-scan" src="/static/icons/footer-scan.png"
     /></view>
     <view class="nav-icon"
       ><img class="footer-icons" src="/static/icons/bars-icon.png"
     /></view>
-    <view class="nav-icon"
+    <view class="nav-icon" @click="goNext('profile/profile')"
       ><img class="footer-icons" src="/static/icons/user-icon.png"
     /></view>
   </view>
 </template>
+<script>
+export default {
+  components: {},
+  methods: {
+    goNext(endpoint) {
+      uni.navigateTo({ url: `/pages/${endpoint}` });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .bottom-nav {

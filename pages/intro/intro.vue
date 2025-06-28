@@ -30,7 +30,6 @@ body {
   padding: 0;
   overflow: hidden;
   height: 100vh;
-  font-family: "Helvetica Neue", "Segoe UI", "Roboto", "Arial", sans-serif;
 }
 .container {
   height: 100vh;

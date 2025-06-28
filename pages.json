@@ -25,6 +25,12 @@
       }
     },
     {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "Scan"
+      }
+    },
+    {
       "path": "pages/scan/scan",
       "style": {
         "navigationBarTitleText": "Scan"
