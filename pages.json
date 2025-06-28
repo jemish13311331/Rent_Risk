@@ -23,6 +23,12 @@
       "style": {
         "navigationBarTitleText": "SignUp"
       }
+    },
+    {
+      "path": "pages/scan/scan",
+      "style": {
+        "navigationBarTitleText": "Scan"
+      }
     }
   ]
 }

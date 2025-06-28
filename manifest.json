@@ -37,11 +37,17 @@
           "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
           "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
           "<uses-feature android:name=\"android.hardware.camera\"/>",
-          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-feature android:name=\"android.hardware.camera\"/>"
         ]
       },
       /* ios打包配置 */
-      "ios": {},
+      "ios": {
+        "privacyDescription": {
+          "NSCameraUsageDescription": "App needs access to your camera to take photos"
+        }
+      },
       /* SDK配置 */
       "sdkConfigs": {}
     }
