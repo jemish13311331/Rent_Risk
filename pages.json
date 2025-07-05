@@ -27,7 +27,7 @@
     {
       "path": "pages/profile/profile",
       "style": {
-        "navigationBarTitleText": "Scan"
+        "navigationBarTitleText": "Profile"
       }
     },
     {
@@ -35,6 +35,16 @@
       "style": {
         "navigationBarTitleText": "Scan"
       }
+    },
+    {
+      "path": "pages/initiatearequest/initiatearequest",
+      "style": {
+        "navigationBarTitleText": "Initiate A Request"
+      }
+    },
+    {
+      "path": "pages/cardstatus/cardstatus",
+      "style": { "navigationBarTitleText": " Card Status" }
     }
   ]
 }
