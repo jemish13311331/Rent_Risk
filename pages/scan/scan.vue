@@ -18,7 +18,7 @@ export default {
       uni.chooseImage({
         count: 1,
         sizeType: ["original", "compressed"],
-        sourceType: ["camera"], // Force using the camera
+        sourceType: ["camera"],
         success: (res) => {
           console.log("Image Path:", res.tempFilePaths[0]);
         },
@@ -53,20 +53,21 @@ export default {
   display: flex;
   justify-content: center;
   position: fixed;
-  bottom: 20px; /* Or any desired spacing from bottom */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 .background {
   background-image: linear-gradient(
-      rgba(13, 2, 20, 0.5),
-      rgba(147, 23, 209, 0.207)
+      to bottom,
+      rgba(25, 1, 40, 0.6),
+      rgba(10, 1, 15, 0.9)
     ),
-    url("your-image.jpg");
-  background-blend-mode: overlay; /* Try multiply or soft-light too */
+    url("/static/scan-gradient.png");
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  height: 100vh; /* or desired height */
+  height: 100vh;
 }
 
 button {

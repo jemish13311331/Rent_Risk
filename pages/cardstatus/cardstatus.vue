@@ -30,12 +30,12 @@ export default {
   data() {
     return {
       events: [
-        { title: "Card is delivered.", date: "Sun. May 16, 2024, 12:06 PM" },
+        { title: "Request Submitted", date: "Sun. May 16, 2024, 12:06 PM" },
         {
           title: "Shipping Label Created",
           date: "Sun. May 16, 2024, 12:06 PM",
         },
-        { title: "Request Submitted", date: "Sun. May 16, 2024, 12:06 PM" },
+        { title: "Card is delivered.", date: "Sun. May 16, 2024, 12:06 PM" },
       ],
     };
   },
