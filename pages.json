@@ -45,6 +45,20 @@
     {
       "path": "pages/cardstatus/cardstatus",
       "style": { "navigationBarTitleText": " Card Status" }
+    },
+    {
+      "path": "pages/leasePage/leasePage",
+      "style": {
+        "navigationBarTitleText": "My Lease"
+      }
+    },
+    {
+    	"path" : "pages/leasePage/lease-detail/lease-detail",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
     }
+
   ]
 }

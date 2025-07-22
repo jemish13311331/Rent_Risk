@@ -9,9 +9,10 @@
     <view class="nav-center" @click="goNext('scan/scan')"
       ><img class="footer-icons-scan" src="/static/icons/footer-scan.png"
     /></view>
-    <view class="nav-icon"
-      ><img class="footer-icons" src="/static/icons/bars-icon.png"
-    /></view>
+    <view class="nav-icon" @click="goNext('leasePage/leasePage')">
+  <img class="footer-icons" src="/static/icons/bars-icon.png" />
+</view>
+
     <view class="nav-icon" @click="goNext('profile/profile')"
       ><img class="footer-icons" src="/static/icons/user-icon.png"
     /></view>

@@ -1,4 +1,5 @@
 <template>
+	
   <view class="page-wrapper">
     <!-- Fixed Top Search Header -->
     <view class="search-header">
