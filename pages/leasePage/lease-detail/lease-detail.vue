@@ -1,85 +1,97 @@
 <template>
   <scroll-view scroll-y class="lease-detail-scroll">
-  <view class="lease-detail-wrapper">
-
-    <!-- Card Display -->
-    <view class="card-display">
-      <image :src="card.image" class="card-image" mode="aspectFit" />
-    </view>
-
-    <!-- Card Info -->
-    <view class="card-info">
-      <view class="card-title-row">
-        <text class="card-name">{{ card.name }}</text>
-        <text class="card-id">#{{ card.id }}</text>
+    <view class="lease-detail-wrapper">
+      <!-- Card Display -->
+      <view class="card-display">
+        <image :src="card.image" class="card-image" mode="aspectFit" />
       </view>
-      <text class="lease-label">My Lease</text>
-	  <view>
-      <text class="token-id">Token ID: {{ card.tokenId }}</text>
-	  </view>
-      <view class="card-stats-price">
-        <view class="card-stats">
-          <view class="stat-box">
-			  <view>
-			  <text class="stat-label">PSA</text>
-			  </view>
-            <text class="stat-value">{{ card.psa }}</text>
+
+      <!-- Card Info -->
+      <view class="card-info">
+        <view class="card-title-row">
+          <text class="card-name">{{ card.name }}</text>
+          <text class="card-id">#{{ card.id }}</text>
+        </view>
+        <text class="lease-label">My Lease</text>
+        <view>
+          <text class="token-id">Token ID: {{ card.tokenId }}</text>
+        </view>
+        <view class="card-stats-price">
+          <view class="card-stats">
+            <view class="stat-box">
+              <view>
+                <text class="stat-label">PSA</text>
+              </view>
+              <text class="stat-value">{{ card.psa }}</text>
+            </view>
+            <view class="stat-box">
+              <view>
+                <text class="stat-label">POP</text>
+              </view>
+              <text class="stat-value">{{ card.pop }}</text>
+            </view>
           </view>
-          <view class="stat-box">
-			<view>
-			<text class="stat-label">POP</text>
-			</view>
-            <text class="stat-value">{{ card.pop }}</text>
-            
+
+          <view class="price-box">
+            <text class="price-label">Price To Claim</text>
+            <view class="price-row">
+              <image src="/static/icons/token-icon.png" class="token-icon" />
+              <text class="price-value">{{ card.price }}</text>
+            </view>
           </view>
         </view>
+      </view>
 
-        <view class="price-box">
-          <text class="price-label">Price To Claim</text>
-          <view class="price-row">
-            <image src="/static/icons/token-icon.png" class="token-icon" />
-            <text class="price-value">{{ card.price }}</text>
-          </view>
+      <!-- Action Buttons -->
+      <view class="action-buttons">
+        <view class="button-wrapper">
+          <button class="sublease-btn">Sub Lease</button>
+        </view>
+        <view class="button-wrapper">
+          <button class="buyout-btn">Buy Out</button>
         </view>
       </view>
-    </view>
+      <PriceChart />
+      <PropertyGrid />
 
-    <!-- Action Buttons -->
-    <view class="action-buttons">
-      <view class="button-wrapper">
-        <button class="sublease-btn">Sub Lease</button>
-      </view>
-      <view class="button-wrapper">
-        <button class="buyout-btn">Buy Out</button>
-      </view>
+      <!-- Bottom Navigation -->
+      <Footer />
     </view>
-
-    <!-- Bottom Navigation -->
-    <Footer />
-  </view>
   </scroll-view>
 </template>
 
 <script setup>
-import Footer from '@/components/Footer.vue';
+import Footer from "@/components/Footer.vue";
+import PriceChart from "../../../components/priceChart.vue";
+import PropertyGrid from "../../../components/propertyGrid.vue";
 
 const card = {
-  name: 'Eevee',
+  name: "Eevee",
   id: 2815,
-  tokenId: 'lsigladifbakfbndf',
-  image: '/static/cards/lease-card.png',
+  tokenId: "lsigladifbakfbndf",
+  image: "/static/cards/lease-card.png",
   psa: 8,
   pop: 4,
-  price: '30.32',
+  price: "30.32",
 };
 </script>
 
 <style scoped>
 .lease-detail-wrapper {
   min-height: 100vh;
-  background: radial-gradient(circle at center, #3a0066 0%, #1f003d 40%, #1a0033 70%, #0f0020 100%);
+  background: radial-gradient(
+    circle at center,
+    #3a0066 0%,
+    #1f003d 40%,
+    #1a0033 70%,
+    #0f0020 100%
+  );
   padding: 60rpx 30rpx 160rpx;
   color: white;
+}
+.lease-detail-scroll {
+  height: 100vh; /* makes scroll-view take up full screen */
+  overflow-y: scroll; /* enables vertical scrolling */
 }
 
 .lease-header-detail {
@@ -148,7 +160,6 @@ const card = {
   display: block;
   margin-left: 30rpx;
 }
-
 
 .card-stats-price {
   display: flex;
