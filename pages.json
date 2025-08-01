@@ -53,12 +53,16 @@
       }
     },
     {
-    	"path" : "pages/leasePage/lease-detail/lease-detail",
-    	"style" : 
-    	{
-    		"navigationBarTitleText" : ""
-    	}
+      "path": "pages/leasePage/lease-detail/lease-detail",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/leasePage/buyout-detail/buyout-detail",
+      "style": {
+        "navigationBarTitleText": ""
+      }
     }
-
   ]
 }

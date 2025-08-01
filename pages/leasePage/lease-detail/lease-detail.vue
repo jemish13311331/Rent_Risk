@@ -1,12 +1,10 @@
 <template>
   <scroll-view scroll-y class="lease-detail-scroll">
     <view class="lease-detail-wrapper">
-      <!-- Card Display -->
       <view class="card-display">
         <image :src="card.image" class="card-image" mode="aspectFit" />
       </view>
 
-      <!-- Card Info -->
       <view class="card-info">
         <view class="card-title-row">
           <text class="card-name">{{ card.name }}</text>
@@ -42,19 +40,38 @@
         </view>
       </view>
 
-      <!-- Action Buttons -->
       <view class="action-buttons">
         <view class="button-wrapper">
-          <button class="sublease-btn">Sub Lease</button>
+          <button
+            class="sublease-btn"
+            @click="
+              goToBuyOutDetail({
+                name: 'Eevvee',
+                price: 30.45,
+                category: 'Number1',
+              })
+            "
+          >
+            Sub Lease
+          </button>
         </view>
         <view class="button-wrapper">
-          <button class="buyout-btn">Buy Out</button>
+          <button
+            class="buyout-btn"
+            @click="
+              goToBuyOutDetail({
+                name: 'Eevvee',
+                price: 30.45,
+                category: 'Number1',
+              })
+            "
+          >
+            Buy Out
+          </button>
         </view>
       </view>
       <PriceChart />
       <PropertyGrid />
-
-      <!-- Bottom Navigation -->
       <Footer />
     </view>
   </scroll-view>
@@ -74,6 +91,13 @@ const card = {
   pop: 4,
   price: "30.32",
 };
+function goToBuyOutDetail(item) {
+  uni.navigateTo({
+    url: `/pages/leasePage/buyout-detail/buyout-detail?name=${encodeURIComponent(
+      item.name
+    )}&price=${item.price}&category=${item.category}`,
+  });
+}
 </script>
 
 <style scoped>
@@ -90,8 +114,8 @@ const card = {
   color: white;
 }
 .lease-detail-scroll {
-  height: 100vh; /* makes scroll-view take up full screen */
-  overflow-y: scroll; /* enables vertical scrolling */
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .lease-header-detail {
@@ -114,8 +138,8 @@ const card = {
 }
 
 .card-image {
-  max-width: 200%;
-  max-height: 200%;
+  width: 226px;
+  height: 314px;
   border-radius: 12rpx;
 }
 
