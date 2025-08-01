@@ -141,19 +141,18 @@ const card = {
   display: flex;
   justify-content: space-between;
   padding: 0 30rpx;
-  font-size: 30rpx;
+  font-size: 30rpx; /* normalized */
   font-weight: 500;
-  font-size: 18px;
 }
 
 .card-id {
-  font-size: 14px;
+  font-size: 24rpx;
   color: #999;
   font-weight: 400;
 }
 
 .token-id {
-  font-size: 14px;
+  font-size: 20rpx;
   color: #aaa;
   padding-left: 30rpx;
   margin-top: 10rpx;
@@ -178,13 +177,13 @@ const card = {
 }
 
 .stat-label {
-  font-size: 20rpx;
+  font-size: 26rpx;
   color: #aaa;
 }
 
 .stat-value {
-  font-size: 18px;
-  color: #9747ff;
+  font-size: 36rpx;
+  color: #cc99ff;
   font-weight: 700;
 }
 
@@ -193,7 +192,7 @@ const card = {
 }
 
 .price-label {
-  font-size: 22rpx;
+  font-size: 26rpx;
   color: #aaa;
 }
 
@@ -206,8 +205,8 @@ const card = {
 }
 
 .token-icon {
-  width: 16px;
-  height: 16px;
+  width: 24rpx;
+  height: 24rpx;
 }
 
 .price-value {
@@ -215,12 +214,18 @@ const card = {
   font-weight: bold;
   color: white;
 }
+.buyout-detail-scroll {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .price-section {
   border-radius: 25px 25px 0 0;
   padding: 30rpx 30rpx 0rpx 30rpx;
   margin-top: 40rpx;
-  background-color: #190c26e3;
+  background-color: rgba(25, 12, 38, 0.4); /* more transparent */
   margin-bottom: 0px;
 }
 
@@ -228,6 +233,7 @@ const card = {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 40rpx;
   justify-content: space-between;
   margin-bottom: 16rpx;
 }
@@ -262,7 +268,7 @@ const card = {
 }
 
 .disclaimer {
-  font-size: 12px;
+  font-size: 20rpx;
   color: #888;
   padding: 10rpx 0rpx 10rpx;
   text-align: center;
@@ -271,17 +277,20 @@ const card = {
 .bottom-nav {
   margin-top: 0px;
 }
+
 .hr-line {
   height: 1px;
   width: 100%;
-  background-color: #8080808c; /* or any color */
+  background-color: #8080808c;
   margin: 20rpx 0;
 }
+
 .arrow-icon {
   height: 24px;
   width: 24px;
   margin-left: 10px;
 }
+
 .price-line {
 }
 </style>

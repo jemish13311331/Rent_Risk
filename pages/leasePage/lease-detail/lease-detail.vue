@@ -33,7 +33,7 @@
           <view class="price-box">
             <text class="price-label">Price To Claim</text>
             <view class="price-row">
-              <image src="/static/icons/token-icon.png" class="token-icon" />
+              <image src="/static/icons/dollar-icon.png" class="token-icon" />
               <text class="price-value">{{ card.price }}</text>
             </view>
           </view>
@@ -66,7 +66,7 @@
               })
             "
           >
-            Buy Out
+            Claim
           </button>
         </view>
       </view>
@@ -124,7 +124,7 @@ function goToBuyOutDetail(item) {
 }
 
 .lease-title {
-  font-size: 24rpx;
+  font-size: 32rpx;
   color: #cccccc;
 }
 
@@ -139,7 +139,7 @@ function goToBuyOutDetail(item) {
 
 .card-image {
   width: 226px;
-  height: 314px;
+  height: 600px;
   border-radius: 12rpx;
 }
 
@@ -203,13 +203,13 @@ function goToBuyOutDetail(item) {
 }
 
 .stat-value {
-  font-size: 28rpx;
+  font-size: 36rpx;
   font-weight: 700;
   color: #cc99ff;
 }
 
 .stat-label {
-  font-size: 20rpx;
+  font-size: 26rpx;
   color: #999;
 }
 
@@ -218,7 +218,7 @@ function goToBuyOutDetail(item) {
 }
 
 .price-label {
-  font-size: 22rpx;
+  font-size: 26rpx;
   color: #aaa;
 }
 
